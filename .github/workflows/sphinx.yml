@@ -32,7 +32,7 @@ jobs:
 
       # Build
       - name: Build documentation
-        run: make html
+        run: sphinx-build -b html source build
 
       # Deploy
       - name: Deploy to GitHub Pages
