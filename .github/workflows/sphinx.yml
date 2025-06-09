@@ -32,11 +32,11 @@ jobs:
 
       # Build
       - name: Build documentation
-        run: sphinx-build -b html source build
+        run: sphinx-build -b html source docs
 
       # Deploy
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./docs
